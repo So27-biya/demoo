@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        /* First Page */
+        img{
+            height:700px;
+            width:1500px;
+            position:absolute;
+            z-index:-1; 
+        }
+
+        p{
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            padding-top: 300px;
+        }    
+
+        /* Second Page */
+        .ee{
+            background-image: url(videohd.jpg);
+            background-size: cover;
+            height:600px;
+            display:none;
+        }
+
+        .ee video{
+            padding-top: 90px;
+            border-radius: 50px;
+            height: 500px;
+            width: 800px;
+        }
+
+        /* Third Page */
+        .cake{
+            background-image: url(ckaa.jpg);
+            background-size: cover;
+            height:600px;
+            display:none;
+        }
+
+        .cake video{
+            padding-top: 150px;
+            border-radius: 50px;
+            height: 400px;
+            width: 600px;
+            margin-left: 500px;
+        }
+
+        .btn{
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            transform: scale(1.1);
+        }
+
+    </style>
+
+    <script>
+        function showPage(page){
+            document.getElementById("page1").style.display="none";
+            document.getElementById("page2").style.display="none";
+            document.getElementById("page3").style.display="none";
+
+            document.getElementById(page).style.display="block";
+        }
+    </script>
+
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div id="page1">
+    <img src="hiii.jpg">
+    <div class="qq">
+        <p>
+            Happy Birthday to my <font color="red">favorite person..❤️</font><br>
+            Happy 24..😍<br>
+            Always be happy and wishing you a all success in your life..🫶🏻
+        </p>
+        <center>
+            <button class="btn" onclick="showPage('page2')">Click..</button>
+        </center>
+    </div>
+</div>
+
+<!-- Page 2 -->
+<div id="page2" class="ee">
+    <video class controls autoplay mute loop>
+        <source src="hioo.mp4">
+    </video>
+    <br><br><br>
+    <center>
+        <button class="btn" onclick="showPage('page3')">Cake for u</button>
+    </center>
+</div>
+
+<!-- Page 3 -->
+<div id="page3" class="cake">
+    <video class controls autoplay mute loop>
+        <source src="cake.mp4">
+    </video>
+    <center>
+        <button class="btn">Next</button>
+    </center>
+</div>
+
+</body>
+</html>
